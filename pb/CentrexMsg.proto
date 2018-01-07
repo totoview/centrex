@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option java_package = "totoview.centrex.rpc";
+option java_outer_classname = "CentrexProtocol";
+
+option go_package = "pb";
+
+message CentrexMsg {
+	enum MessageType {
+		Login = 0;
+		LoginRsp = 1;
+	}
+
+	MessageType type = 1;
+
+	Login login = 2;
+	LoginRsp loginRsp = 3;
+}
+
+message Login {
+	uint32 requestId = 1;
+	string username = 2;
+	string password = 3;
+}
+
+message LoginRsp {
+	uint32 requestId = 1;
+	int32 errorCode = 2;
+	string errorMsg = 3;
+}

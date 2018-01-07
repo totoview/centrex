@@ -1,0 +1,11 @@
+- clients connect to gateways
+- gateways manage clients as client sessions
+- server sessions is the bridge between clients and services
+- server sessions are implemented as state machines
+  - services are located through service discovery
+  - request/response to/from services are async
+  - communication between sessions and services are through libchan
+  - communication between clients and sessions may be:
+    - persistent tcp connection
+	- http + webhook
+	- or any combinations

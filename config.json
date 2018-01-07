@@ -1,0 +1,10 @@
+{
+	"centrex": {
+		"addr": "127.0.0.1:3333",
+		"secure": true,
+		"keypair": {
+			"cert": "centrex.pem",
+			"key": "centrex.key"
+		}
+	}
+}
